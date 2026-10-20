@@ -32,6 +32,7 @@ jobs:
       contents: read
       packages: write
     with:
+      extra-ignored-file-patterns: '^apm\.yml$|^apm\.lock\.yaml$|^\.agents/|^\.github/instructions/'
       provider: ${{ matrix.provider }}
       use-canonical-k8s: ${{ matrix.use-canonical-k8s == 'true' }}
       channel: ${{ matrix.channel }}
